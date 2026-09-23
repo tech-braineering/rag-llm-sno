@@ -13,3 +13,6 @@ vllmServingRuntime:
     argocd.argoproj.io/sync-wave: "20"
 
   model: ibm-granite/granite-4.0-h-small
+
+acceleratorProfile:
+  enabled: false
