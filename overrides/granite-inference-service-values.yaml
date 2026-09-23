@@ -14,7 +14,7 @@ vllmServingRuntime:
     openshift.io/display-name: granite-inference
     argocd.argoproj.io/sync-wave: "20"
 
-  model: ibm-granite/granite-4.0-h-small
+  model: ibm-granite/granite-3.3-2b-instruct
 
 acceleratorProfile:
   enabled: false
