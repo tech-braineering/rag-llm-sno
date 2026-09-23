@@ -69,13 +69,6 @@ clusterGroup:
       extraValueFiles:
         - $patternref/overrides/granite-inference-service-values.yaml
 
-    gpt-oss-inference-service:
-      name: gpt-oss-inference-service
-      namespace: rag-llm-sno
-      path: charts/vllm-inference-service
-      extraValueFiles:
-        - $patternref/overrides/gpt-oss-inference-service-values.yaml
-
     vector-db:
       name: vector-db
       namespace: rag-llm-sno
