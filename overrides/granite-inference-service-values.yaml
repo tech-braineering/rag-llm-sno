@@ -15,6 +15,10 @@ vllmServingRuntime:
     argocd.argoproj.io/sync-wave: "20"
 
   model: ibm-granite/granite-3.3-2b-instruct
-
+  
+  extraArgs:
+    - --max-model-len
+    - "16384"
+    
 acceleratorProfile:
   enabled: false
