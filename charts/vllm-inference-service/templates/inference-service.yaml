@@ -10,6 +10,10 @@ spec:
   predictor:
     annotations:
       {{- toYaml .Values.vllmInferenceService.predictor.annotations | nindent 6 }}
+    {{- with .Values.vllmInferenceService.predictor.deploymentStrategy }}
+    deploymentStrategy:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
     maxReplicas: {{ .Values.vllmInferenceService.predictor.replicas }}
     minReplicas: {{ .Values.vllmInferenceService.predictor.replicas }}
     model:
