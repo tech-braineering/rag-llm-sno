@@ -1,3 +1,5 @@
+fullnameOverride: granite-vllm
+
 vllmInferenceService:
   annotations:
     openshift.io/display-name: granite-inference
