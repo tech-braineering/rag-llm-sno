@@ -13,6 +13,13 @@ vllmServingRuntime:
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
     openshift.io/display-name: granite-inference
     argocd.argoproj.io/sync-wave: "20"
+    
+  predictor:
+    deploymentStrategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxSurge: 0
+        maxUnavailable: 1
 
   model: ibm-granite/granite-3.3-2b-instruct
   
