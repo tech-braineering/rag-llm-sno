@@ -15,6 +15,9 @@ spec:
         - {{ .Values.vllmServingRuntime.model }}
         - --port
         - {{ .Values.vllmServingRuntime.port | quote }}
+        {{ range .Values.vllmServingRuntime.extraArgs }}
+        - {{ . | quote }}
+        {{ end }}
       command:
         {{- toYaml .Values.vllmServingRuntime.command | nindent 8 }}
       image: "{{ .Values.vllmServingRuntime.image.repository }}:{{ .Values.vllmServingRuntime.image.tag }}"
